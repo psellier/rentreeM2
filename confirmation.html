@@ -5,19 +5,34 @@
 	<script>
 window.dataLayer = window.dataLayer || [];
  
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
- 'category': 'Confirmation',
- 'event': 'purchase',
- 'transactionId': '1234',
- 'transactionAffiliation': 'Acme Clothing',
- 'transactionTotal': 90,
- 'transactionProducts': [{
-   'name': 'Maillot Domicile stade rennais',
-   'price': 90,  
-   'size' : 'M',
-	 'marque' : 'Puma'
- }]
+  'ecommerce': {
+    'currencyCode': 'EUR',                       // Local currency is optional.
+    'impressions': [
+     {
+       'name': 'Triblend Android T-Shirt',       // Name or ID is required.
+       'id': '12345',
+       'price': '15.25',
+       'brand': 'Google',
+       'category': 'Apparel',
+       'variant': 'Gray',
+       'list': 'Search Results',
+       'position': 1
+     },
+     {
+       'name': 'Donut Friday Scented T-Shirt',
+       'id': '67890',
+       'price': '33.75',
+       'brand': 'Google',
+       'category': 'Apparel',
+       'variant': 'Black',
+       'list': 'Search Results',
+       'position': 2
+     }]
+  }
 });
+</script>
  
 </script>
 	<!-- Google Tag Manager -->
